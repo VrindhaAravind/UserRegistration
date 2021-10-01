@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'home.html'%}
+{%block body_block%}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="card" style="width: 26rem;">
+                <h3 style="text-align:center; font-family:cursive;">MY PROFILE</h3>
+                <img src="{{detail.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><b>NAME : </b>{{detail.first_name}} {{detail.last_name}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>DATE OF BIRTH : </b>{{detail.dob}}</li>
+                    <li class="list-group-item"><b>EMAIL ADDRESS : </b>{{user.email}}</li>
+                    <li class="list-group-item"><b>PHONE : </b>{{detail.mobile_number}}</li>
+                    <li class="list-group-item"><b>USERNAME : </b>{{user.username}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+{%endblock%}
+</html>
